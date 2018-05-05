@@ -42,7 +42,7 @@ $( document ).ready(function(){
         {
             $("#name").val('');
             $("#apellidos").val('');
-            $("#correo").val('');
+            $("#email").val('');
             $("#telefono").val('');
             $("#hacer_reserva").css('display','none');
             $("#mensaje_alerta").show();
