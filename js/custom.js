@@ -25,4 +25,29 @@ $( document ).ready(function(){
         $("#eventos_por_dia").html("<h4>Eventos de hoy</h4><p>Charla sobre igualdad de género<br><button type='button' class='btn btn-xs'>Mas info</button><br>Exposición de fotografía moderna<br><button type='button' class='btn btn-xs'>Mas info</button><br>Visita a la Alhambra guiada<br><button type='button' class='btn btn-xs'>Mas info</button><br>Concierto de música clásica<br><button type='button' class='btn btn-xs'>Mas info</button></p><p><button id='mas_eventos_diarios_2' type='button' class='btn btn-xs'>Mas eventos</button></p>");;
     });
 
+    $("#reservar_evento").click(function(){
+       $("#reservar_evento").css('display','none');
+       $("#form_reserva").show();
+    });
+
+    $("#hacer_reserva").click(function(){
+        var nombre = $("#name").val().length;
+        var apellidos = $("#apellidos").val().length;
+        var correo = $("#email").val().length;
+        var telefono = $("#telefono").val().length;
+
+        if ((nombre === 0 || apellidos === 0 || correo === 0 || telefono === 0))
+            alert("Debe rellenar todos los campos");
+        else
+        {
+            $("#name").val('');
+            $("#apellidos").val('');
+            $("#correo").val('');
+            $("#telefono").val('');
+            $("#hacer_reserva").css('display','none');
+            $("#mensaje_alerta").show();
+
+        }
+    });
+
 });
